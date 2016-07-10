@@ -59,7 +59,7 @@ then
 	echo "$teststr1 > $teststr2"
 else
 	echo "$teststr1 < $teststr2"
-if
+fi
 
 if [ -z "$teststr0" ]
 then
@@ -86,16 +86,18 @@ echo "next num is $a"
 done
 
 
+# while [command], do loop when command is exit with 0
 while [ $testnum1 -ne 20 ]
 do
 	echo "this loop, num is $testnum1"
-	$testnum1 = $[ $testnum1 + 1 ]
+	testnum1=$[ $testnum1 + 1 ]
 done
 
-until [ $testnum1 -ge 10 ]
+# until [command], do loop when command is not exit whith 0
+until [ $testnum1 -le 10 ]
 do
 	echo "this loop, num is $testnum1"
-	$testnum1 = $[ $testnum1 - 1 ]
+	testnum1=$[ $testnum1 - 1 ]
 done
 
 
