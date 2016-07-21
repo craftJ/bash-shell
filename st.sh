@@ -29,7 +29,7 @@ then
 		sleep 1
 	done
 	echo "----------- shut down !-----------"
-	shutdown -P now
+	sudo shutdown -P now
 fi
 
 
