@@ -1,0 +1,15 @@
+BEGIN{
+print "-------- LASTEST USR INFO ---------"
+print "userid       bash"
+print "--------     --------"
+FS=":"
+} 
+
+{
+print $1 "      " $7
+}
+
+END{
+print "--------------------------------------"
+}
+
