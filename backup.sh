@@ -8,7 +8,7 @@ DATE_MONTH=`date +%m`
 DATE_DAY=`date +%d`
 DATE_TIME=`date +%H%M%S`
 FILE_CFG="/home/tiger/mybackup/CFG_FILES_BACKUP"
-PACK_STOR_BASE="/home/mybackup"
+PACK_STOR_BASE="/home/tiger/mybackup"
 PACK_FILE_NAME=$PACK_STOR_BASE/$DATE_YEAR/$DATE_MONTH/$DATE_DAY/backup-$DATE_TIME.tar.gz
 
 
@@ -25,7 +25,7 @@ else
 fi
 
 
-exec 0>$FILE_CFG
+exec 0<$FILE_CFG
 
 # step1: read your cfg file
 # step2: check file for backup
@@ -58,9 +58,9 @@ then
 fi
 
 
-mkdir -p $PACK_SOTR_BASE/$DATE_YEAR/$DATE_MONTH/$DATE_DAY
+mkdir -p $PACK_STOR_BASE/$DATE_YEAR/$DATE_MONTH/$DATE_DAY
 
-tar -zcf $PATH_FILE_NAME $filelist 2> /dev/null
+tar -zcf $PACK_FILE_NAME $filelist 2> /dev/null
 
 
 
