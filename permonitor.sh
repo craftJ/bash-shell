@@ -30,7 +30,9 @@ function showsysinfo() {
 }
 
 function cpucost() {
-	echo '---todo'
+#	echo '---todo'
+	ps -A -l | awk '{print $1"\t"$2"\t"$5}' | grep -v "CPU\|PID\|UID" | sort -n -r -k 3 |\
+		sed -n '1,10p'
 }
 
 function memcost() {
